@@ -13,4 +13,3 @@ public enum RomanNumeral {
         return d;
     }
 }
-

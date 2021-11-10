@@ -7,11 +7,9 @@ public class Main {
         String el = sc.nextLine();
 
         if  (el.matches(".*[IVX].*")){
-            roman();
-        }
+            roman();}
         else {
-            arabian();
-        }
+            arabian();}
     }
     static void roman(){
         Scanner sc = new Scanner(System.in);
@@ -24,10 +22,8 @@ public class Main {
         int r = a1 * b1, r1 = a1 / b1, r2 = a1 + b1, r3 = a1 - b1;
         if (el.contains("*") || el.contains("/") || el.contains("+") || el.contains("-")) {
             int res = el.contains("*") ? r : el.contains("/") ? r1 : el.contains("+") ? r2 : r3;
-            System.out.println("Output: \n" + ArabianNumeral.valueOf("K" + res).getName());
-        } else {
-            System.out.println("Incorrect!");
-        }
+            System.out.println("Output: \n" + ArabianNumeral.valueOf("K" + res).getName());}
+        else {System.out.println("Incorrect!");}
     }
     static void arabian(){
         Scanner sc = new Scanner(System.in);
@@ -39,9 +35,7 @@ public class Main {
         if (el.contains("*") && a <= 10 && b <= 10 || el.contains("/") && a <= 10 && b <= 10
                 || el.contains("+") && a <= 10 && b <= 10 || el.contains("-") && a <= 10 && b <= 10) {
             int res = el.contains("*") ? r : el.contains("/") ? r1 : el.contains("+") ? r2 : r3;
-            System.out.println("Output: \n" + res);
-        } else {
-            System.out.println("Incorrect!");
-        }
+            System.out.println("Output: \n" + res);}
+        else {System.out.println("Incorrect!");}
     }
 }
